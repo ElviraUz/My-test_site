@@ -1,4 +1,4 @@
-env/
-static/
-.vscode/
-webapp.dp
+webapp.db
+env
+.vscode
+*.pyc

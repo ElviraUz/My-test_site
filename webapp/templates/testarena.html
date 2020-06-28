@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="generator" content="Jekyll v4.0.1">
-    <title>{{ page_title}}</title>
+    <title>{{ arena.name }}</title>
     <!-- Bootstrap core CSS -->
-<link href="assets\dist\css\bootstrap.css" rel="stylesheet">
+<link href="static\css\bootstrap.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -90,7 +90,8 @@
   <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
     <div class="my-3 p-3">
       <h2 class="display-5">{{ page_title }}</h2>
-      <p class="lead">{{ description }}</p>
+      <p class="lead">{{ arena.description }}</p>
+      <img src="{{url_for('static', filename= arena.image)}}" align="middle" />
     </div>
     <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
   </div>
@@ -136,5 +137,5 @@
   </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script></body>
-</html>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="assets/dist/js/bootstrap.bundle.js"></script></body>
+</html> 

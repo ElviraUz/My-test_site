@@ -1,0 +1,13 @@
+set FLASK_APP=webapp
+flask run
+
+<img src="{{url_for('static', filename= arena.image)}}" align="middle" />  - это урла для картинки 
+https://docs.sqlalchemy.org/en/13/orm/tutorial.html#create-an-instance-of-the-mapped-class - ссыка для инстансов ( наполнение базы данных)
+
+from webapp.model import Arenas
+arena = Arenas (name="TestName", adress="Testadress",metro="Test MetroName", description="Test Descrption", website="test.org", image="image.jpg")
+from webapp.model import db
+db.session.add(arena)
+db.session.commit()
+
+посмотреть урок про requirements
