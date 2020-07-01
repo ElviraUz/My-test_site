@@ -2,3 +2,8 @@ webapp.db
 env
 .vscode
 *.pyc
+.vscode
+параметры запуска.txt
+webapp/.vscode
+webapp/__pycache__
+webapp/static

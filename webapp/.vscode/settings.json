@@ -1,5 +1,5 @@
 {
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
-    "python.pythonPath": "C:\\projects\\arena\\env\\Scripts\\python.exe"
+    "python.pythonPath": "C:\\Program Files (x86)\\Python37-32\\python.exe"
 }

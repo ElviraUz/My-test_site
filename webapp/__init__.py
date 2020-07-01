@@ -5,8 +5,7 @@ from .model import db, Arenas
 def create_app():
     app = Flask(__name__)
     app.config.from_pyfile('config.py')
-    with app.app_context():
-        db.init_app(app)
+    db.init_app(app)
 
     @app.route("/")  #декоратор позволяет открывать наш сайт, слэш - это локаль
     def hello():
