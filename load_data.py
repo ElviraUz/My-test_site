@@ -37,7 +37,7 @@ with app.app_context():
     for prop in properties:
         name = str(prop.get("properties", {}).get("CompanyMetaData", {}).get("name", {}))
         adress = str(prop.get("properties", {}).get("description", {}))
-        website = str(prop.get("properties", {}).get("CompanyMetaData", {}).get('url', {}))
+        website = str(prop.get("properties", {}).get("CompanyMetaData", {}).get('url'))
         phones = str(get_phones(prop))
         hours24 = get_is_24(prop)
         import_data(name=name,
