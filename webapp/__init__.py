@@ -14,7 +14,7 @@ def create_app():
 
     @app.route('/arena')
     def arena():
-        arena = Arenas.query.filter(Arenas.id == 1).first()
+        arena = Arenas.query.filter(Arenas.id == 182).first()
         #такая функция должна быть у каждой страницы для рендера
         return render_template('testarena.html', arena=arena)
 

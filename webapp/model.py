@@ -9,8 +9,8 @@ class Arenas(db.Model):
     website = db.Column(db.String, nullable=False)
     phones = db.Column(db.String, nullable=False)
     hours24 = db.Column(db.Boolean, nullable=False)
-    description = db.Column(db.Text, nullable=True)
-    image = db.Column(db.Text, nullable=True)
+    description = db.Column(db.Text, nullable=False)
+    image = db.Column(db.Text, nullable=False)
     metro = db.Column(db.String, nullable=False)
     def __repr__(self):
         return '<Arenas {}'.format(self.name)
