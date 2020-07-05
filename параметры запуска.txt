@@ -5,9 +5,32 @@ flask run
 https://docs.sqlalchemy.org/en/13/orm/tutorial.html#create-an-instance-of-the-mapped-class - ссыка для инстансов ( наполнение базы данных)
 
 from webapp.model import Arenas
-arena = Arenas (name="TestName", adress="Testadress",metro="Test MetroName", description="Test Descrption", website="test.org", image="image.jpg")
+arena = Arenas (name="Test name",
+                adress="Test adress",
+                website = "Test website",
+                phones="+71111111111",
+                hours24=True,
+                description="Test Descrption",
+                image="image.jpg",
+                metro="Metro",
+                everyday=False)
 from webapp.model import db
 db.session.add(arena)
 db.session.commit()
 
 посмотреть урок про requirements
+
+>>> from webapp.model import Brief
+>>> arena = Arenas (name="Test name",
+...                 adress="Test adress",
+...                 website = "Test website",
+...                 phones="+71111111111",
+...                 hours24=True,
+...                 description="Test Descrption",
+...                 image="image.jpg",
+...                 metro="Metro",
+...                 everyday=False)
+
+
+ brief=Brief(brief1="Test brief 1", brief2="Test brief2", brief3="Test brief 3")
+>>> db.session.commit()

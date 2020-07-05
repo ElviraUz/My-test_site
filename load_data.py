@@ -9,7 +9,7 @@ with open("data_file.json", "rb") as read_file:
     data = json.load(read_file)
     properties = data['features']
 
-def import_data(name, adress, website, phones, hours24,description, image, metro):
+def import_data(name, adress, website, phones, hours24,description, image, metro,everyday):
     arena=Arenas(name=name,
                 adress=adress,
                 website = website,
@@ -17,7 +17,9 @@ def import_data(name, adress, website, phones, hours24,description, image, metro
                 hours24=hours24,
                 description="Test Descrption",
                 image="image.jpg",
-                metro="111")
+                metro="111",
+                everyday=everyday)
+
     db.session.add(arena)
     db.session.commit()
 
@@ -32,6 +34,12 @@ def get_is_24(prop):
         return hours24[0].get("TwentyFourHours", False)
     return False
 
+def get_everyday(prop):
+    everyday = prop.get("properties", {}).get("CompanyMetaData", {}).get("Hours", {}).get('Availabilities',{})
+    if isinstance(everyday, list):
+        return everyday[0].get("Everyday", False)
+    return False #НЕ РАБОТАЕТ!!
+    
 
 with app.app_context():
     for prop in properties:
@@ -40,6 +48,7 @@ with app.app_context():
         website = str(prop.get("properties", {}).get("CompanyMetaData", {}).get('url'))
         phones = str(get_phones(prop))
         hours24 = get_is_24(prop)
+        everyday = get_everyday(prop)
         import_data(name=name,
                 adress=adress,
                 website = website,
@@ -47,7 +56,8 @@ with app.app_context():
                 hours24=hours24,
                 description="Test Descrption",
                 image="image.jpg",
-                metro="Metro")
+                metro="Metro",
+                everyday=everyday)
 
 
 

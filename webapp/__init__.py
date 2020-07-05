@@ -1,5 +1,6 @@
 from flask import Flask, render_template
-from .model import db, Arenas
+from .model import db, Arenas, Brief
+from flask import abort
 
 
 def create_app():
@@ -12,10 +13,24 @@ def create_app():
         page_title = "Киберспорт Арены"
         return render_template('index.html', page_title=page_title)
 
-    @app.route('/arena')
-    def arena():
-        arena = Arenas.query.filter(Arenas.id == 182).first()
-        #такая функция должна быть у каждой страницы для рендера
-        return render_template('testarena.html', arena=arena)
+
+    @app.route('/main')
+    def main_page():
+        page_title="Киберспорт в Москве"
+        return render_template ('main.htm', page_title=page_title)
+
+	# @app.route('/catalogue')
+	# def catalogue_page
+	# 	page_title= "Каталог киберспорт арен"
+	#     return render_template ('main.htm', page_title=page_title)
+
+    @app.route('/arena/<int:arenas_id>')
+    def arena(arenas_id):
+        arena= Arenas.query.get(arenas_id)
+        brief=Brief.query.get(arena.brief_id)
+	#   if not arenas_id:
+	#   	abort (404)
+
+        return render_template('testarena.html', page_title=arena.name, arena=arena, brief=brief )
 
     return app

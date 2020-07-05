@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="generator" content="Jekyll v4.0.1">
-    <title>{{ page_title}}</title>
+    <title>{{ name }}</title>
     <!-- Bootstrap core CSS -->
-<link href="assets\dist\css\bootstrap.css" rel="stylesheet">
+<link href="static\css\bootstrap.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -26,7 +26,7 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="assets\dist\css\product.css" rel="stylesheet">
+    <link href="static\css\product.css" rel="stylesheet">
 
   </head>
   <body>
@@ -55,7 +55,7 @@
       <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
       <div class="container">
         <div class="carousel-caption text-left">
-          <p>Тут тезисы для арены из функции ( самая большая в Москве. 100 игровых машин и т.д</p>
+          <p>{{  brief.brief1  }}</p>
         </div>
       </div>
     </div>
@@ -63,7 +63,7 @@
       <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
       <div class="container">
         <div class="carousel-caption">
-          <p>Три VIP комнаты на 5 мест</p>
+          <p>{{  brief.brief2  }}</p>
         </div>
       </div>
     </div>
@@ -71,7 +71,7 @@
       <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
       <div class="container">
         <div class="carousel-caption text-right">
-          <p>Самые мощные видеокарты в мире</p>
+          <p>{{  brief.brief3  }}</p>
         </div>
       </div>
     </div>
@@ -89,15 +89,15 @@
 <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
   <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
     <div class="my-3 p-3">
-      <h2 class="display-5">{{ page_title }}</h2>
-      <p class="lead">{{ description() }}</p>
+      <h2 class="display-5">{{ name }}</h2>
+      <p class="lead">{{ description }}</p>
     </div>
     <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
   </div>
   <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
     <div class="my-3 p-3">
       <h2 class="display-5">Параметры</h2>
-      <p class="lead">Параметры.(создать модель после импорта)</p>
+      <p class="lead">{{ website }} {{ phones }} {{ hour24 }} {{ website }}</p>
     </div>
     <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
   </div>
@@ -106,7 +106,7 @@
 <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
   <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
     <div class="my-3 p-3">
-      <h2 class="display-5">Ближайшая станция метро:{{ metro() }} </h2>
+      <h2 class="display-5">Ближайшая станция метро:{{ metro }} </h2>
       <p class="lead">Вывести карту</p>
     </div>
     <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
@@ -136,5 +136,5 @@
   </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script></body>
+      <script>window.jQuery || document.write('<script src="static/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="static\js\bootstrap.bundle.js"></script></body>
 </html>
