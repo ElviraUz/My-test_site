@@ -22,7 +22,7 @@ def create_app():
 	# @app.route('/catalogue')
 	# def catalogue_page
 	# 	page_title= "Каталог киберспорт арен"
-	#     return render_template ('main.htm', page_title=page_title)
+	#     return render_template ('main.html', page_title=page_title)
 
     @app.route('/arena/<int:arenas_id>')
     def arena(arenas_id):
@@ -31,6 +31,6 @@ def create_app():
 	#   if not arenas_id:
 	#   	abort (404)
 
-        return render_template('testarena.html', page_title=arena.name, arena=arena, brief=brief )
+        return render_template('testarena.html', page_title=arena.name, arena=arena, brief=brief, )
 
     return app
