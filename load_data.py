@@ -1,5 +1,6 @@
 from webapp import create_app
-from webapp.model import db, Arenas
+# from webapp.model import db, Arenas
+from webapp.testadminka import db, Arenas ##пробная штука 
 import json
 
 app = create_app()
@@ -38,7 +39,7 @@ def get_everyday(prop):
     everyday = prop.get("properties", {}).get("CompanyMetaData", {}).get("Hours", {}).get('Availabilities',{})
     if isinstance(everyday, list):
         return everyday[0].get("Everyday", False)
-    return False #НЕ РАБОТАЕТ!!
+    return False
     
 
 with app.app_context():

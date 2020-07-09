@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="generator" content="Jekyll v4.0.1">
-    <title>{{ name }}</title>
+    <title>{{ arena.name }}</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename= 'css/bootstrap.css') }}">
 
@@ -33,7 +33,6 @@
     <nav class="site-header sticky-top py-1">
   <div class="container d-flex flex-column flex-md-row justify-content-between">
     <a class="py-2" href="#" aria-label="Product">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
     </a>
     <a class="py-2 d-none d-md-inline-block" href="#">Главная</a>
     <a class="py-2 d-none d-md-inline-block" href="#">Все арены Москвы </a>
@@ -97,7 +96,7 @@
   <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
     <div class="my-3 p-3">
       <h2 class="display-5">Параметры</h2>
-      <p class="lead">{{ website }} {{ phones }} {{ hour24 }} {{ website }}</p>
+      <p class="lead">{{ arena.website }} {{ arena.phones }} {{ arena.hour24 }}</p>
     </div>
     <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
   </div>
@@ -106,7 +105,7 @@
 <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
   <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
     <div class="my-3 p-3">
-      <h2 class="display-5">Ближайшая станция метро:{{ metro }} </h2>
+      <h2 class="display-5">Ближайшая станция метро:{{ arena.metro }} </h2>
       <p class="lead">Вывести карту</p>
     </div>
     <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
@@ -115,7 +114,7 @@
     <div class="my-3 py-3">
       <h2 class="display-5">Соцсети</h2>
       <p class="lead">VK FB Instagram </p>
-      <h2 class="display-5">Официальный сайт {{ website }}</h2>
+      <h2 class="display-5">Официальный сайт {{ arena.website }}</h2>
     </div>
     <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
   </div>
