@@ -12,6 +12,8 @@ def create_app():
     db.init_app(app)
     admin = Admin(app)
 
+    app.config["SECRET_KEY"] = "mysecret"
+
     admin.add_view(ModelView(Arenas, db.session))
     admin.add_view(ModelView(Brief, db.session))
 
@@ -28,16 +30,16 @@ def create_app():
 
     @app.route('/catalogue')
     def catalogue_page():
-        page_title = "Все киберспорт арены Москвы"
-        arena = Arenas.query.get (arenas_id)
-        
-        return render_template ('catalogue.html', page_title=page_title, arena=arena,)
+        arenas = Arenas.query.all()[:10]
+        print(arenas)
+        page_title = "Все киберспорт арены "     
+        return render_template('catalogue.html', page_title=page_title,arenas=arenas)
 
 
     @app.route('/arena/<int:arenas_id>')
     def arena(arenas_id):
         arena = Arenas.query.get(arenas_id)
-        brief = Brief.query.get(arena_brief_id)
+        brief = Brief.query.get(arena.brief_id)
 
 	#   if not arenas_id:
 	#   	abort (404)

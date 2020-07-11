@@ -1,6 +1,6 @@
 from webapp import create_app
-# from webapp.model import db, Arenas
-from webapp.testadminka import db, Arenas ##пробная штука 
+from webapp.model import db, Arenas
+from webapp import db, Arenas 
 import json
 
 app = create_app()
@@ -10,14 +10,17 @@ with open("data_file.json", "rb") as read_file:
     data = json.load(read_file)
     properties = data['features']
 
-def import_data(name, adress, website, phones, hours24,description, image, metro,everyday):
-    arena=Arenas(name=name,
+
+def import_data(name, adress, website, phones, hours24,description, image,image2, image3, metro,everyday):
+    arena = Arenas(name=name,
                 adress=adress,
-                website = website,
+                website=website,
                 phones=phones,
                 hours24=hours24,
                 description="Test Descrption",
                 image="image.jpg",
+                image2="image.jpg",
+                image3="image.jpg",
                 metro="111",
                 everyday=everyday)
 
@@ -52,11 +55,13 @@ with app.app_context():
         everyday = get_everyday(prop)
         import_data(name=name,
                 adress=adress,
-                website = website,
+                website=website,
                 phones=phones,
                 hours24=hours24,
                 description="Test Descrption",
                 image="image.jpg",
+                image2="image.jpg",
+                image3="image.jpg",
                 metro="Metro",
                 everyday=everyday)
 

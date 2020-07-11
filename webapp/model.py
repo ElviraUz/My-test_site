@@ -12,6 +12,8 @@ class Arenas(db.Model):
     hours24 = db.Column(db.Boolean, nullable=False)
     description = db.Column(db.Text, nullable=False)
     image = db.Column(db.Text, nullable=False)
+    image2 = db.Column(db.Text, nullable=False)
+    image3 = db.Column(db.Text, nullable=False)
     metro = db.Column(db.String, nullable=False)
     everyday = db.Column(db.Boolean, nullable=False)
     brief_id = db.Column(db.Integer, db.ForeignKey('brief.id'), nullable=True)
