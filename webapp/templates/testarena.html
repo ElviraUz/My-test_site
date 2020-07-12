@@ -91,47 +91,33 @@
       <h2 class="display-5">{{ arena.name }}</h2>
       <p class="lead">{{ arena.description }}</p>
     </div>
-    <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
   </div>
   <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
     <div class="my-3 p-3">
       <h2 class="display-5">Параметры</h2>
-      <p class="lead">{{ arena.website }} {{ arena.phones }} {{ arena.hour24 }}</p>
+      <p>Телефон:{{ arena.image  }}</p>
+      <p>Телефон:{{ arena.phones}}</p>
+      <p>Круглосуточно:{{ arena.hour24 }}</p>
+      <p>Ежедневно:{{ arena.everyday }}</p>
+      <p>Метро:{{ arena.metro }}</p>
     </div>
-    <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
   </div>
 </div>
-
-<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-    <div class="my-3 p-3">
-      <h2 class="display-5">Ближайшая станция метро:{{ arena.metro }} </h2>
-      <p class="lead">Вывести карту</p>
-    </div>
-    <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
   </div>
   <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
     <div class="my-3 py-3">
       <h2 class="display-5">Соцсети</h2>
-      <p class="lead">VK FB Instagram </p>
+      <p class="lead"></p>VK: {{ arena.vk}} </p>
+      <p class="lead">Instagram: {{ arena.Instagram}} </p>
+      <p class="lead">Twich: {{ arena.twich}} </p>
       <h2 class="display-5">Официальный сайт {{ arena.website }}</h2>
     </div>
-    <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
   </div>
 </div>
 
 <footer class="container py-5">
   <div class="padding-top: 60px; on the main > .container.">
  </div>
-    <div class="col-6 col-md">
-      <h5>About</h5>
-      <ul class="row-unstyled text-small">
-        <li><a class="text-muted" href="#">Team</a></li>
-        <li><a class="text-muted" href="#">Locations</a></li>
-        <li><a class="text-muted" href="#">Privacy</a></li>
-        <li><a class="text-muted" href="#">Terms</a></li>
-      </ul>
-    </div>
   </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

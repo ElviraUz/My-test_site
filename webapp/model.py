@@ -16,6 +16,9 @@ class Arenas(db.Model):
     image3 = db.Column(db.Text, nullable=False)
     metro = db.Column(db.String, nullable=False)
     everyday = db.Column(db.Boolean, nullable=False)
+    vk = db.Column(db.Text, nullable=False)
+    instagram = db.Column(db.Text, nullable=False)
+    twich = db.Column(db.Text, nullable=False)
     brief_id = db.Column(db.Integer, db.ForeignKey('brief.id'), nullable=True)
 
     def __repr__(self):

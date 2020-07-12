@@ -30,7 +30,7 @@ def create_app():
 
     @app.route('/catalogue')
     def catalogue_page():
-        arenas = Arenas.query.all()[:10]
+        arenas = Arenas.query.all()[:9]
         print(arenas)
         page_title = "Все киберспорт арены "     
         return render_template('catalogue.html', page_title=page_title,arenas=arenas)
@@ -46,4 +46,3 @@ def create_app():
         return render_template('testarena.html', arena=arena, brief=brief)
 
     return app
-

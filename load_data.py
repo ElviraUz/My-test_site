@@ -11,7 +11,8 @@ with open("data_file.json", "rb") as read_file:
     properties = data['features']
 
 
-def import_data(name, adress, website, phones, hours24,description, image,image2, image3, metro,everyday):
+def import_data(name, adress, website, phones, hours24, description, image, 
+                image2, image3, metro, everyday, vk, instagram, twich):
     arena = Arenas(name=name,
                 adress=adress,
                 website=website,
@@ -21,8 +22,11 @@ def import_data(name, adress, website, phones, hours24,description, image,image2
                 image="image.jpg",
                 image2="image.jpg",
                 image3="image.jpg",
-                metro="111",
-                everyday=everyday)
+                metro="Киберспортивная",
+                everyday=everyday,
+                vk=vk,
+                instagram=instagram,
+                twich=twich)
 
     db.session.add(arena)
     db.session.commit()
@@ -63,7 +67,10 @@ with app.app_context():
                 image2="image.jpg",
                 image3="image.jpg",
                 metro="Metro",
-                everyday=everyday)
+                everyday=everyday,
+                vk="vk.com",
+                instagram="instagram.com",
+                twich="twich.com")
 
 
 
